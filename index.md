@@ -7,3 +7,5 @@ description:
 
 Check Box-2d project: [winit](https://xcemaxx.github.io/box2d-lite-rs/winit_version), 
 [macroquad](https://xcemaxx.github.io/box2d-lite-rs/macroquad_version) 
+
+Play [Ghost Rabbit](https://xcemaxx.github.io/ghost_rabbit_ai/) game
