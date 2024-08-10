@@ -1,6 +1,6 @@
 ---
 permalink: /third_party/
-title: "Third party articles"
+title: "Статьи на сторонних ресурсах"
 excerpt: "links to my articles on another resources"
 author_profile: true
 layout: single

@@ -1,5 +1,5 @@
 ---
-title: "Posts by categories"
+title: "Посты по категориям"
 layout: categories
 excerpt: "Posts by categories"
 permalink: /posts/categories/

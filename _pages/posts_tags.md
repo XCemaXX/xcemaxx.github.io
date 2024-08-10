@@ -1,5 +1,5 @@
 ---
-title: "Posts by tags"
+title: "Посты по тэгам"
 layout: tags
 excerpt: "Posts by tags"
 permalink: /posts/tags/

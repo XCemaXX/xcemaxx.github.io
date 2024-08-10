@@ -1,5 +1,5 @@
 ---
-title: "Posts"
+title: "Посты"
 layout: posts_clean
 excerpt: "Posts"
 permalink: /posts/

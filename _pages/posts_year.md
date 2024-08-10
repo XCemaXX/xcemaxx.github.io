@@ -1,5 +1,5 @@
 ---
-title: "Posts by year"
+title: "Посты по годам"
 layout: posts
 excerpt: "Posts by year"
 permalink: /posts/year/

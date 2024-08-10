@@ -15,7 +15,7 @@ minimal_mistakes_skin    : "default" # "default", "air", "aqua", "contrast", "da
 # Site Settings
 locale                   : "ru-RU" #en-US
 rtl                      : # true, false (default) # turns direction of the page into right to left for RTL languages
-title                    : "XCemaXX Blog"
+title                    : "Блог XCemaXX"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Andreev Semen"
@@ -126,6 +126,9 @@ author:
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/xcemaxx/"
+    - label: "Resume"
+      icon: "fas fa-fw fa-link"
+      url: "https://docs.google.com/document/d/1ku8D7zrPluUGtypWZj082OcE5ez36Vl1"
     - label: "Habr"
       icon: "fas fa-fw fa-link"
       url: "https://habr.com/ru/users/XCemaXX/"
