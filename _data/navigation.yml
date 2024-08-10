@@ -1,0 +1,12 @@
+# main links
+main:
+  - title: "Posts"
+    url: /posts/
+  - title: "Projects"
+    url: /projects/
+  - title: "Books"
+    url: /books/
+  - title: "Third party articles"
+    url: /third_party/
+  - title: "About"
+    url: /about/
