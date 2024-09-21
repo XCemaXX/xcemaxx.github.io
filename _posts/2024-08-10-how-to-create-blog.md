@@ -8,13 +8,17 @@ tags:
 classes: wide
 ---
 
-# Зачем блог
+# Зачем блог  
 [О пользе ведения профессионального блога](https://vsevolodustinov.ru/blog/all/o-polze-vedeniya-professionalnogo-bloga/)  
+
 [Зачем вести блог (несмотря ни на что)](https://sergeykorol.ru/blog/about-blog/)  
-# До блога
+# До блога  
 [Начал с постов в linkedin](https://www.linkedin.com/in/xcemaxx/recent-activity/all/)  
+
 [Потом сделал пару постов на vas3k](/third_party/)  
+
 [Завел спортивный канал в телеграмме](https://t.me/const_gym)  
+
 # Техническая реализация
 [Смотрим в инструкцию и выполняем, что написано](https://github.com/barryclark/jekyll-now)
 
@@ -45,4 +49,5 @@ rm -rf _site; rm -rf .jekyll-cache; rm -rf .bundle; jekyll serve
 Проверяем на `http://127.0.0.1:4000/`  
 ## Подстраиваем  
 Смотрим [пример запущенного шаблона с разными плюшками](https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/)  
+
 [Полный код проекта](https://github.com/mmistakes/minimal-mistakes/tree/master/docs)
