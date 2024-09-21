@@ -10,7 +10,7 @@
   {% assign title = post.title %}
 {% endif %}
 
-{% assign post_date = post.date | date: "%B %-d, %Y" %}
+{% assign post_date = post.date | date: "%d %b %Y" %}
 
 <div class="{{ include.type | default: 'list' }}__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork"{% if post.locale %} lang="{{ post.locale }}"{% endif %}>
