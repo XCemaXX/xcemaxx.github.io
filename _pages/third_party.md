@@ -7,4 +7,5 @@ layout: single
 classes: wide
 ---
 
-* [База: качаемся. Vas3k](https://vas3k.club/post/24620/)
+* [База: качаемся. Vas3k.club](https://vas3k.club/post/24620/)
+* [К чему может привести путь длиной в 8 лет рисования? Vas3k.club](https://vas3k.club/post/25852/)
