@@ -33,11 +33,11 @@ classes: wide
   На момент выхода стандарта они ещё сырые, рекомендуется использовать с готовыми библиотеками.  
 - **Concepts**  
   Позволяют задавать ограничения на типы в шаблонах. Ранее это делалось через SFINAE и `std::enable_if`, но выглядело сложно:  
-  ```
+  ```cpp
   template<typename T, std::enable_if_t<std::is_integral_v<T>, void*> = nullptr>
   ```  
   Теперь это проще и читаемее:  
-  ```
+  ```cpp
   template <std::integral T> bool func(T arg) {}
   // or 
   bool func(std::integral auto arg) {}

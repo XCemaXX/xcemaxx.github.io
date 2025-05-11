@@ -27,7 +27,7 @@ classes: wide
 - **Трейты Send/Sync**. Перенёс `Send + Sync` в сами трейты, а не раскидывал их через generic-параметры.
 - **Унифицированный конструктор через трейты**. Ввел трейт `IntoSharedMaterial`, позволяющий писать единый конструктор вместо дублирования `from_shared_texture`, `from_texture`:
 
-```  
+```rust
 pub trait IntoSharedMaterial {
     fn into_arc(self) -> Arc<dyn Material>;
 }
@@ -47,7 +47,7 @@ impl<T: Material + 'static> IntoSharedMaterial for T {
 
 - **Трансформации объектов**. Создал трейт `Transformable` для поворота и перемещения объектов через преобразование типов. Аналогично сделаны итераторы, `map`, `filter` и т.д.  
 
-```
+```rust
 pub struct RotateY<T: Hit> { // Все объекты характеризуются трейтом Hit в проекте
     object: T,
 }

@@ -3,7 +3,8 @@ title: "Отслеживание аллокаций. Malloc tracer"
 categories:
   - Article
 tags:
-  - C/C++
+  - C
+  - C++
   - GDB
   - Python
   - programming

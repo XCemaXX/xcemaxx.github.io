@@ -14,7 +14,7 @@ classes: wide
 
 Когда я начал изучать Rust, то у меня порвало шаблон. Я увидел [реализацию связного списка](https://google.github.io/comprehensive-rust/smart-pointers/box.html) в функциональном стиле в виде одного `enum` без указателей:  
 
-```
+```rust
 enum List<T> {
     Element(T, Box<List<T>>),
     Nil
@@ -25,7 +25,7 @@ enum List<T> {
 ### Связные списки на практике
 В решении задачи с [linked list](https://exercism.org/tracks/rust/exercises/simple-linked-list), я написал реализацию списка, как по учебнику C, только без указателей, чтобы обойтись без unsafe:  
 
-```
+```rust
 struct Node<T> {
     data: T,
     next: Option<Box<Node<T>>>,
@@ -51,7 +51,7 @@ type Link<T> = Option<Box<Node<T>>>;
 Минус этой реализации - шарить части списка не получится. Эту проблему мы будем исправлять на следующем шаге.  
 
 Для [реализации неизменяемого односвязного списка](https://github.com/XCemaXX/rust_study_path/blob/too_many_linked_lists/11_linked_lists/02_stacks/third.rs) с общими (разделяемыми) частями понадобится `Rc`. Этот подход можно уже считать решением задачи с графом, которую я обходил через хранение узлов в векторе. Здесь все честно, ноды лежат в памяти без самописного аллокатора:
-```
+```rust
 //list1 -> A -+
 //            |
 //            v
@@ -74,7 +74,7 @@ pub struct List<T> {
 
 ### Очередь на двухсвязном списке
 Первая попытка [реализации двухсвязного списка](https://github.com/XCemaXX/rust_study_path/blob/too_many_linked_lists/11_linked_lists/03_queues/fourth_safe.rs) оказывается полууспешной - список рабоает, но без возможности сделать мутирующий итератор.
-```
+```rust
 type Link<T> = Option<Rc<RefCell<Node<T>>>>;
 
 struct Node<T> {
@@ -92,7 +92,7 @@ struct List<T> {
 
 ### Unsafe и Stacked Borrows
 [Решение проблемы двусвязного списка](https://github.com/XCemaXX/rust_study_path/blob/too_many_linked_lists/11_linked_lists/03_queues/fifth_unsafe.rs) с API, не раскрывающим детали реализации, проходит через unsafe Rust:
-```
+```rust
 type Link<T> = Option<Box<Node<T>>>;
 
 struct Node<T> {
@@ -110,7 +110,7 @@ struct List<T> {
 "Stacked Borrows" - механизм, с помощью которого Rust отслеживает, какие указатели имеют право доступа к данным в конкретный момент времени.
 Указатель помещается на вершину «стека заимствований» при каждом новом заимствовании, например, когда ссылка преобразуется в сырой указатель `*mut` или `*const`. В каждый момент времени доступ к данным разрешён только через указатель, находящийся на вершине стека, что предотвращает одновременное мутирующее обращение через несколько указателей:
 
-```
+```rust
 let mut data = 10;
 let ref1 = &mut data;
 let ref2 = &mut *ref1;
@@ -132,7 +132,7 @@ let ref2 = &mut *ref1;
 Свойство ковариантности нужно для того, чтобы коллекция по `T` была коварианта `T`, что позволяет подставить `List<&'a T>` вместо `List<&'b T>`, где `a` - дольше живет.  
 
 Учтя все это, получаем [такую структуру](https://github.com/XCemaXX/rust_study_path/blob/too_many_linked_lists/11_linked_lists/05_queue_production/linked_list/mod.rs):
-```
+```rust
 struct Node<T> {
     elem: T,
     front: Link<T>,
@@ -152,7 +152,7 @@ struct List<T> {
 
 Следующие несколько глав идет повторение пройденного и тележка болерплейта для реализации интерфейса `front/back` и трейтов. Но есть и новое, автор вводит `CursorMut`, который позволяет делать `splice` и `split`:
 
-```
+```rust
 pub struct CursorMut<'a, T> {
     cur: Link<T>,
     list: &'a mut LinkedList<T>,
@@ -164,7 +164,7 @@ pub struct CursorMut<'a, T> {
 ### Связный список на стеке - не повторять
 В заключении автор забавы ради приводит [связный список на стеке](https://github.com/XCemaXX/rust_study_path/blob/too_many_linked_lists/11_linked_lists/06_silly/reqursive_on_stack.rs), который каждый новый элемент аллоцирует через `callback`:
 
-```
+```rust
 pub struct List<'a, T> {
     pub data: T,
     pub prev: Option<&'a List<'a, T>>,
