@@ -20,7 +20,7 @@ classes: wide
 
 Разберемся, что делать, если один и тот же символ реализован дважды, и линковщик "не понимает", какую версию выбрать.
 ## Демонстрационный hello_world
-> Демо лежит на [GitHub](https://github.com/XCemaXX/symbol-clash-demo).  
+> Демо лежит на [Godbolt](https://godbolt.org/z/zocGTTWjn), где можно управлять поведением через cmake флаги. Весь код проекта на [GitHub](https://github.com/XCemaXX/symbol-clash-demo) 
 
 Код заголовочных файлов `libstatic_v2.a` и `libshared_v1.so` идентичен, но у разных версий реализация отличается:
 ```cpp

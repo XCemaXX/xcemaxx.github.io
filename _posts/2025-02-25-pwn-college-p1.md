@@ -7,6 +7,7 @@ tags:
   - linux
   - assembly
   - gdb
+  - study
 #layout: splash
 classes: wide
 ---

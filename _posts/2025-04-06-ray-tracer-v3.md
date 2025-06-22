@@ -5,6 +5,7 @@ categories:
 tags:
   - programming
   - rust
+  - study
 classes: wide
 ---
 Продолжил работу над **Ray Tracer** на Rust. Результаты первой части [описывал ранее](/article/study-rust-2025/).
