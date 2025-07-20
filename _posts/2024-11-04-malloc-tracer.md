@@ -5,7 +5,7 @@ categories:
 tags:
   - C
   - C++
-  - GDB
+  - gdb
   - Python
   - programming
 classes: wide
