@@ -27,4 +27,5 @@ High-frequency trading: a practical guide to algorithmic strategies and trading 
 Книга глубокая и технически насыщенная — для новичка избыточна. Скорее она для разработчиков продвинутых HFT-алгоритмов, а не для первого знакомства. Я до такого еще не дорос.
 
 # Что еще почитать
-[Оставлю список рекомендуемой литературы](https://elitetrader.ru/index.php?newsid=448061) — сам не читал.
+[Оставлю список рекомендуемой литературы](https://elitetrader.ru/index.php?newsid=448061) — сам не читал.  
+[Вводная статья по теме рынков и ордеров](https://www.machow.ski/posts/2021-07-18-introduction-to-limit-order-books/)
