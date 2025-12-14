@@ -4,6 +4,7 @@ categories:
   - Books
 tags:
   - book
+  - rust
 classes: wide
 ---
 
