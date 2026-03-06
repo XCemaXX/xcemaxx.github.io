@@ -2,6 +2,12 @@
    MIXINS
    ========================================================================== */
 
+@use "sass:math";
+@use "sass:meta";
+@use "sass:list";
+@use "sass:color";
+@use "variables" as *;
+
 %tab-focus {
   /* Default*/
   outline: thin dotted $focus-color;
@@ -15,9 +21,43 @@
    ========================================================================== */
 
 @function em($target, $context: $doc-font-size) {
-  @return ($target / $context) * 1em;
+  @return math.div($target, $context) * 1em;
 }
 
+/*
+   Breakpoint mixin (replaces vendor/breakpoint)
+   ========================================================================== */
+
+@mixin breakpoint($value) {
+  @if meta.type-of($value) == "number" {
+    @media (min-width: math.div($value, 16px) * 1em) {
+      @content;
+    }
+  } @else if meta.type-of($value) == "list" {
+    $feature: list.nth($value, 1);
+    $px-value: list.nth($value, 2);
+    @media (#{$feature}: math.div($px-value, 16px) * 1em) {
+      @content;
+    }
+  }
+}
+
+/*
+   Susy replacement functions
+   ========================================================================== */
+
+$_susy-gutter-ratio: 0.25;
+
+@function span($span, $of: 4) {
+  $total: $of + ($of - 1) * $_susy-gutter-ratio;
+  $span-width: $span + ($span - 1) * $_susy-gutter-ratio;
+  @return math.percentage(math.div($span-width, $total));
+}
+
+@function gutter($mult: 1, $of: 4) {
+  $total: $of + ($of - 1) * $_susy-gutter-ratio;
+  @return math.percentage(math.div($_susy-gutter-ratio * $mult, $total));
+}
 
 /*
    Bourbon clearfix
@@ -61,15 +101,19 @@
   $color,
   $threshold: $yiq-contrasted-threshold
 ) {
-  $red: red($color);
-  $green: green($color);
-  $blue: blue($color);
+  $red: color.channel($color, "red", $space: rgb);
+  $green: color.channel($color, "green", $space: rgb);
+  $blue: color.channel($color, "blue", $space: rgb);
 
-  $yiq: (($red*299)+($green*587)+($blue*114))/1000;
+  $yiq: math.div(($red*299)+($green*587)+($blue*114), 1000);
 
   @if $yiq-debug { @debug $yiq, $threshold; }
 
-  @return if($yiq >= $threshold, true, false);
+  @if $yiq >= $threshold {
+    @return true;
+  } @else {
+    @return false;
+  }
 }
 
 @function yiq-contrast-color(
@@ -78,7 +122,11 @@
   $light: $yiq-contrasted-light-default,
   $threshold: $yiq-contrasted-threshold
 ) {
-  @return if(yiq-is-light($color, $threshold), $yiq-contrasted-dark-default, $yiq-contrasted-light-default);
+  @if yiq-is-light($color, $threshold) {
+    @return $yiq-contrasted-dark-default;
+  } @else {
+    @return $yiq-contrasted-light-default;
+  }
 }
 
 @mixin yiq-contrasted(
