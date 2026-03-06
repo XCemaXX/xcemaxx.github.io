@@ -183,6 +183,7 @@ exclude:
   - LICENSE
   - log
   - node_modules
+  - minimal-mistakes-jekyll.gemspec
   - package.json
   - package-lock.json
   - Rakefile

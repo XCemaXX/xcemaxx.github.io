@@ -9,7 +9,7 @@ tags:
 classes: wide
 ---
 
-После изучения базы по Rust (подробности в [гайде](/article/study-rust-2025/)) я стал искать, как углубить знания. Попалась [неудачная серия материалов](notes/study-rust-2025-p2/), но потом я нашёл то, что нужно — YouTube-канал Jon Gjengset с отличной серией видео [Crust of Rust](https://www.youtube.com/playlist?list=PLqbS7AVVErFiWDOAVrPt7aYmnuuOLYvOa).  
+После изучения базы по Rust (подробности в [гайде](/article/study-rust-2025/)) я стал искать, как углубить знания. Попалась [неудачная серия материалов](/notes/study-rust-2025-p2/), но потом я нашёл то, что нужно — YouTube-канал Jon Gjengset с отличной серией видео [Crust of Rust](https://www.youtube.com/playlist?list=PLqbS7AVVErFiWDOAVrPt7aYmnuuOLYvOa).  
 
 С первой лекции про lifetime annotations я понял: это именно тот контент, которого не хватало. Ниже — обзор тем Crust of Rust и заметки того, что зацепило.
 

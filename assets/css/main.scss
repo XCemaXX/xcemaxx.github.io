@@ -7,3 +7,17 @@ search: false
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
+
+.short-post {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5em;
+}
+
+.short-post__date {
+  flex-shrink: 0;
+  width: 5.8em;
+  text-align: justify;
+  text-align-last: justify;
+  color: #6c757d;
+}
