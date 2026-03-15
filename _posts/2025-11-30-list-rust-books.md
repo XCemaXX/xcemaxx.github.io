@@ -38,4 +38,4 @@ classes: wide
 1. [Rust by Example](https://doc.rust-lang.org/rust-by-example/index.html)
 
 ## Books about Rust, but not in Rust-book style
-1. [Rust Atomics and Locks](https://marabos.nl/atomics/)
+1. [Rust Atomics and Locks](https://marabos.nl/atomics/) ✅
