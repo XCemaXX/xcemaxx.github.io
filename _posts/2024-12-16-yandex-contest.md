@@ -31,8 +31,10 @@ classes: wide
 ## Список лекций по контестам
 Если вы хотите попробовать себя в этих тренировках, вот ссылки на лекции, которые я прошел:
 
+- **[Тренировки по алгоритмам 9.0](https://www.youtube.com/playlist?list=PLXtiZNKIobF5bgeVO9tydWzOolhQByHXb)**  
+  Решал на Rust/Python, получил [сертификат](/notes/yandex9).  
 - **[Тренировки по алгоритмам 8.0](https://www.youtube.com/playlist?list=PLXtiZNKIobF67yMSkXWth1K_l_Z2Z1J5S)**  
-  Решал на Rust/Python, получил сертификат.  
+  Решал на Rust/Python, получил сертификат. [Сертификат в bonus части статьи Making our own executable packer](/article/exec-packer/#bonus)
 - **[Тренировки по алгоритмам 7.0](https://www.youtube.com/playlist?list=PLXtiZNKIobF6xrJWjplY11yubEK815E_S)**  
   Решал на Rust/Python, получил сертификат. [Упомниал прохождение тут](/notes/study-rust-2025-p2/#тренировки-по-алгоритмам-70-от-yandex).
 - **[Тренировки по алгоритмам 6.0](https://www.youtube.com/playlist?list=PLXtiZNKIobF5wb5euWUzEGkvg--bhC668)**  
