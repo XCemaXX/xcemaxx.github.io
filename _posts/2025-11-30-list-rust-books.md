@@ -20,6 +20,9 @@ classes: wide
 1. [The Cargo Book](https://doc.rust-lang.org/cargo/index.html)
 1. [Rust API Guidelines](https://rust-lang.github.io/api-guidelines/about.html)
 1. [The rustup book](https://rust-lang.github.io/rustup/index.html)
+1. [Standard library developers Guide](https://std-dev-guide.rust-lang.org)
+1. [Rust Compiler Development Guide](https://rustc-dev-guide.rust-lang.org)
+1. [Unsafe Code Guidelines Reference](https://rust-lang.github.io/unsafe-code-guidelines/)
 
 ## Study
 1. [Effective Rust](https://www.lurklurk.org/effective-rust) ✅
@@ -28,7 +31,7 @@ classes: wide
 1. [Asynchronous Programming in Rust](https://rust-lang.github.io/async-book/)
 1. [The Little Book of Rust Macros](https://lukaswirth.dev/tlborm/)
 1. [Lifetime Variance Example](https://lifetime-variance.sunshowers.io/index.html) ✅
-2. [The Embedonomicon](https://docs.rust-embedded.org/embedonomicon/)
+1. [The Embedonomicon](https://docs.rust-embedded.org/embedonomicon/)
 
 ## Practice-oriented
 1. [Comprehensive Rust](https://google.github.io/comprehensive-rust/index.html) ✅
@@ -39,3 +42,7 @@ classes: wide
 
 ## Books about Rust, but not in Rust-book style
 1. [Rust Atomics and Locks](https://marabos.nl/atomics/) ✅
+1. RUST for rustaceans. Jon Gjengset ✅
+
+## Еще один список
+Если этого списка мало, то вот еще один [The Little Book of Rust Books](https://lborb.github.io/book/title-page.html)
