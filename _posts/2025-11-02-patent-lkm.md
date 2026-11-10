@@ -11,7 +11,7 @@ classes: wide
 
 [Патент RU2844647C1 "Система и способ загрузки драйвера в операционную систему" можно найти по ссылке](https://patents.google.com/patent/RU2844647C1/).  
 <figure style="display: flex; justify-content: center;">
-  <img src="{{ '/assets/images/2025-11-02-patent-lkm.jpg' | relative_url }}" style="width: 100%; max-width: 400px;" alt="cache latencies">
+  <img src="{{ '/assets/images/2025-11-02-patent-lkm.jpg' | relative_url }}" style="width: 100%; max-width: 400px;" alt="Kaspersky Innovation of the Year 2023 award and Kick-Off 24 badge">
 </figure>  
 
 Основная идея патента - один раз собрать ядро кернел-модуля, и с помощью ловкости рук "дособрать" полноценный модуль ядра уже под конкретное ядро Linux и запустить его. Кроме ловкости рук требуется заранее подготовленная метаинформация о каждом ядре и работающий в системе модуль-донор.  

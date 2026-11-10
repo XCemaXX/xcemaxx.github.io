@@ -2,7 +2,27 @@
 layout: none
 ---
 
-var idx = lunr(function () {
+// The index is big, so it loads on first search use, not on every page.
+var idx = null;
+var storeLoad = null;
+
+function loadStore() {
+  if (!storeLoad) {
+    storeLoad = new Promise(function (resolve, reject) {
+      var s = document.createElement('script');
+      s.src = "{{ '/assets/js/lunr/lunr-store.js' | relative_url }}";
+      s.onload = resolve;
+      s.onerror = reject;
+      document.head.appendChild(s);
+    }).then(buildIndex, function () {
+      storeLoad = null;
+    });
+  }
+  return storeLoad;
+}
+
+function buildIndex() {
+  idx = lunr(function () {
   this.field('title')
   this.field('excerpt')
   this.field('categories')
@@ -20,12 +40,13 @@ var idx = lunr(function () {
       id: item
     })
   }
-});
+  });
+}
 
-$(document).ready(function() {
-  $('input#search').on('keyup', function () {
+function runSearch(input) {
+    if (!idx) return;
     var resultdiv = $('#results');
-    var query = $(this).val().toLowerCase();
+    var query = $(input).val().toLowerCase();
     var result =
       idx.query(function (q) {
         query.split(lunr.tokenizer.separator).forEach(function (term) {
@@ -69,5 +90,13 @@ $(document).ready(function() {
       }
       resultdiv.append(searchitem);
     }
+}
+
+$(document).ready(function() {
+  $('.search__toggle').on('click', loadStore);
+  $('input#search').on('focus', loadStore);
+  $('input#search').on('keyup', function () {
+    var input = this;
+    loadStore().then(function () { runSearch(input); });
   });
 });

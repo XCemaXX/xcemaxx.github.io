@@ -13,7 +13,7 @@ classes: wide
 {: .notice--info .text-center}
 
 <figure style="display: flex; justify-content: center;">
-  <img src="{{ '/assets/images/2025-11-16-algo-kormen.png' | relative_url }}" style="width: 100%; max-width: 600px;" alt="cache latencies">
+  <img src="{{ '/assets/images/2025-11-16-algo-kormen.png' | relative_url }}" style="width: 100%; max-width: 600px;" alt="Cormen Introduction to Algorithms and Algorithms Unlocked book covers">
 </figure>  
 
 Базовая база - алгоритмы с математикой, доказательствами корректности и оценками сложности. Та самая книга, которую хорошо бы читать на первых курсах университета. Навёрстываю упущенное.  

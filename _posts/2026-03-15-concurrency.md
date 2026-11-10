@@ -15,7 +15,7 @@ C++ Concurrency in action [2020] Anthony Wiliams
 {: .notice--info .text-center}
 
 <figure style="display: flex; justify-content: center;">
-  <img src="{{ '/assets/images/2026-03-15-concurrency.png' | relative_url }}" style="width: 100%; max-width: 600px;" alt="cache latencies">
+  <img src="{{ '/assets/images/2026-03-15-concurrency.png' | relative_url }}" style="width: 100%; max-width: 600px;" alt="C++ Concurrency in Action and Rust Atomics and Locks book covers">
 </figure>  
 
 Поводом глубже погрузиться в тему конкурентности [стал пойманный мной баг](/notes/address-sanitizer) в крейте [thingbuf](https://crates.io/crates/thingbuf) ([issue](https://github.com/hawkw/thingbuf/issues/100)). После этого я прикупил книгу **C++ Concurrency in Action**, и параллельно начал читать онлайн **Rust Atomics and Locks**.

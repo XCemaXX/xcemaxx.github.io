@@ -15,7 +15,7 @@ classes: wide
 Почему-то многие считают эту книгу сложной и тягомотной, но мне она зашла. По ощущениям, это такой же базовый computer science, как Таненбаум и другие книги, которые читают в универе.
 
 <figure style="display: flex; justify-content: center;">
-  <img src="{{ '/assets/images/2026-05-07-kaban.png' | relative_url }}" style="width: 100%; max-width: 600px;" alt="cache latencies">
+  <img src="{{ '/assets/images/2026-05-07-kaban.png' | relative_url }}" style="width: 100%; max-width: 600px;" alt="Designing Data-Intensive Applications book cover, Russian edition">
 </figure>
 
 Через всю книгу красной нитью проходит простая идея: мир неидеален, ошибки могут возникать везде. Чем больше система, тем больше в ней частей, которые могут сломаться. Хороший инженер должен уметь строить надёжные системы из ненадёжных компонентов и понимать, на какие компромиссы приходится идти при разработке.  
